@@ -1,6 +1,7 @@
 esp32
 
-partition table: /Users/bnyf/Documents/code/Haiway/kernel/vendors/espressif/boards/esp32/aws_demos/partition-table.csv
+partition table:
+../../../kernel/vendors/espressif/boards/esp32/aws_demos/partition-table.csv
 
 toolchain:
 export PATH="/Users/bnyf/Documents/code/xtensa-esp32-elf/bin:$PATH"
