@@ -1,1 +1,1 @@
-haiway rtos kernel
+kernel
