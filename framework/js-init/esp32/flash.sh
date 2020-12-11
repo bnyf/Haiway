@@ -1,5 +1,10 @@
+curdir=`pwd`
+cd ../../..
 cdir=`cd $(dirname $0); pwd`;
-export HAIWAY=$cdir/../../..
+export HAIWAY=$cdir
+cd $curdir
+
+echo "${HAIWAY}"
 
 OSNAME=${1:-MAC}
 echo "os: ${OSNAME}"
@@ -19,6 +24,6 @@ if ! type xtensa-esp32-elf-gcc 2> /dev/null > /dev/null; then
     export PATH=$PATH:`pwd`/xtensa-esp32-elf/bin/
 fi
 
-cmake -S . -B build -GNinja
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=${HAIWAY}/kernel/tools/cmake/toolchains/xtensa-esp32.cmake
 
 cmake --build build --target flash
