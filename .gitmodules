@@ -1,6 +1,3 @@
-[submodule "libs/jerryscript"]
-	path = libs/jerryscript
+[submodule "runtime/jerryscript"]
+	path = runtime/jerryscript
 	url = https://github.com/bnyf/jerryscript.git
-[submodule "kernel"]
-	path = kernel
-	url = https://github.com/aws/amazon-freertos.git
